@@ -28,23 +28,26 @@
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSctLQWQDRX8misooxOqfxO49DJq-nsBKY1d-0f7vxArPcURNw/formResponse" method="post"  target="hidden_frame">
         <div class="Form-element">
             <span>First Name</span>
-            <input autocomplete="off" id="fname"  type="text" name="entry.64417033" placeholder="Type your first name" class="form-control" required> 
+            <input autocomplete="off" id="fname"  type="text" name="entry.64417033" placeholder="ENTER YOUR FIRST NAME" class="form-control" required> 
 
         </div>
         <div class="Form-element">
             <span>Last Name</span>
-            <input autocomplete="off" id="lname" type="text" name="entry.1605759906" placeholder="Type your last name" class="form-control"  required> 
+            <input autocomplete="off" id="lname" type="text" name="entry.1605759906" placeholder="ENTER YOUR LAST NAME" class="form-control"  required> 
 
         </div>
 
         <div class="Form-element">
-            <span>Mentor Name</span>
-            <input autocomplete="off" id="email" type="text" name="entry.702626432" placeholder="Mentor Name" class="form-control"  required> 
-
+            <span>Coach Name</span>
+            <select id="email" name="entry.1905593189"  required>
+                <option></option>
+                <option value="TJ Zarate">Toni Jane Zarate</option>
+                <option value="Maika Daroy">Maika Daroy</option>
+            </select>
         </div>
         <div class="Form-element">
             <span>Date of the session<span>
-            <input autocomplete="off" id="timezone" id="timezone"  type="date" name="entry.399870195" class="form-control"  required> 
+            <input autocomplete="off" id="timezone" type="date" name="entry.399870195" class="form-control"  required> 
 
         </div>
         <br>
@@ -57,7 +60,7 @@
         <div class="Form-element">
           
             <span>How effective was I at building rapport</span>
-            <select id="avail" name="entry.1905593189"  required>
+            <select id="select1" class="avail" name="entry.1905593189"  required>
                 <option></option>
                 <option value="1-Poor">1-Poor</option>
                 <option value="2-Fair">2-Fair</option>
@@ -70,7 +73,7 @@
         <div class="Form-element">
        
             <span>How authentic do you feel I was</span>
-            <select id="avail" name="entry.1239622085"  required>
+            <select id="select1" class="avail"  name="entry.1239622085"  required>
                 <option></option>
                 <option value="1-Poor">1-Poor</option>
                 <option value="2-Fair">2-Fair</option>
@@ -84,7 +87,7 @@
         <div class="Form-element">
          
             <span>How effective I was at uncovering obstables</span>
-            <select id="avail" name="entry.637087066"  required>
+            <select  id="select2"  class="avail"name="entry.637087066"  required>
                 <option></option>
                 <option value="1-Poor">1-Poor</option>
                 <option value="2-Fair">2-Fair</option>
@@ -96,7 +99,7 @@
         <div class="Form-element">
       
             <span>How effective was I at getting you to think differently</span>
-            <select id="avail" name="entry.562279210"  required>
+            <select id="select3" class="avail"  name="entry.562279210"  required>
                 <option></option>
                 <option value="1-Poor">1-Poor</option>
                 <option value="2-Fair">2-Fair</option>
@@ -108,7 +111,7 @@
         <div class="Form-element">
        
             <span>Did your sessions end with a clear commitment</span>
-            <select id="avail" name="entry.1678372425"  required>
+            <select  id="select4" class="avail" name="entry.1678372425"  required>
                 <option></option>
                 <option value="1-Poor">1-Poor</option>
                 <option value="2-Fair">2-Fair</option>
@@ -132,26 +135,26 @@
 
 
         
-        <div class="Form-element">
-            <span>What di you like best about this coaching session?</span>
-            <textarea type="text" id="bio" name="entry.2074904089" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
+ <div class="Form-element">
+            <span>What did you like best about this coaching session?</span>
+            <textarea type="text" id="bio1"  name="entry.2074904089" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
 
         </div>
-        <div class="Form-element">
+<div class="Form-element">
             <span>Anything that I could have done better?</span>
-            <textarea type="text" id="bio" name="entry.854119935" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
+            <textarea type="text" id="bio2"  name="entry.854119935" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
         </div>
     </div>
 
-    <div class="Form-element">
+ <div class="Form-element">
         <span>Please share any additional observations</span>
-        <textarea type="text" id="bio" name="entry.2145655458" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
+        <textarea type="text" id="bio3" name="entry.2145655458" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
     </div>
 </div>
 
 <div class="Form-element">
     <span>What commitments and timelines you have made from this session</span>
-    <textarea type="text" id="bio" name="entry.1820552964" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
+    <textarea type="text" id="bio4" name="entry.1820552964" placeholder="Place your feedback here..." class="form-control"   style="height: 200px;" required></textarea>
 </div>
 </div>
         <button type="submit" onclick="myFunction()" id="submit" data-toggle="modal" data-target=".bd-example-modal-lg" name="submit_change">Submit your application</button>
@@ -177,14 +180,21 @@
 
     var fname = $("#fname").val();
     var lname = $("#lname").val();
-    var email = $("#email").val();
-    var timezone = $("timezone").val();
-    var avail = $("#avail").val();
-    var bio = $("#bio").val();
-    var cb = $("#cb").val();
+    var mname = $("#email").val();
+    var date = $("#timezone").val();
+    var rate1 = $("#select1").val();
+    var rate2 = $("#select2").val();
+    var rate3 = $("#select3").val();
+    var rate4 = $("#select4").val();
+    var bio1 = $("#bio1").val();
+    var bio2 = $("#bio2").val();
+    var bio3 = $("#bio3").val();
+    var bio4 = $("#bio4").val();
+
+ 
 
     
-    if (fname ==''||lname==''||email==''||timezone==''||avail==''||bio==''){
+    if (fname ==''||lname==''||mname==''||date==''||rate1==''||rate2==''||rate3==''||rate4==''||bio1==''||bio2==''||bio3==''||bio4==''){
         swal({
   title: "Fields Empty!",
   text: "Please check the missing field!",
@@ -201,6 +211,9 @@
   icon: "success",
   button: "Done",
 });
+
+
+
 }})
 
 
