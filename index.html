@@ -36,28 +36,16 @@
             <input autocomplete="off" id="lname" type="text" name="entry.1605759906" placeholder="ENTER YOUR LAST NAME" class="form-control"  required> 
 
         </div>
+        <div class="Form-element">
+            <span>Email</span>
+            <input autocomplete="off" id="lemail" type="text" name="entry.1739657332" placeholder="ENTER YOUR LAST NAME" class="form-control"  required> 
+
+        </div>
 
         <div class="Form-element">
             <span>Coach Name</span>
             <select id="email" name="entry.702626432"  required>
                 <option></option>
-                <option>Chris Gray</option>
-                <option>Kathleen Gander</option>
-                <option>Dianne Cunningham</option>
-                <option>Olga Kaminer</option>
-                <option>Prasheen Singh</option>
-                <option>Agustin	Paredes</option>
-                <option>Kimberly Jordan</option>
-                <option>Hortencia Silfa</option>
-                <option>Laura Sofia	Castro Alvarez</option>
-                <option>Chrislyn Benjamin</option>
-                <option>Lauri Clontz</option>
-                <option>Robyn Clontz</option>
-                <option>Puja Gupta</option>
-                <option>Melissa Kinzley</option>
-                <option>Jay	Leigeber</option>
-                <option>Saskia Resin</option>
-                <option>Sandra Smith</option>
                 <option>Tj Test</option>
                 <option>Teacher TJ</option>
             </select>
@@ -198,6 +186,7 @@
 
     var fname = $("#fname").val();
     var lname = $("#lname").val();
+    var email = $("#lemail").val();
     var mname = $("#email").val();
     var date = $("#timezone").val();
     var rate1 = $("#select1").val();
@@ -212,7 +201,7 @@
  
 
     
-    if (fname ==''||lname==''||mname==''||date==''||rate1==''||rate2==''||rate3==''||rate4==''||bio1==''||bio2==''||bio3==''||bio4==''){
+    if (fname ==''||lname=='' ||email==''||mname==''||date==''||rate1==''||rate2==''||rate3==''||rate4==''||bio1==''||bio2==''||bio3==''||bio4==''){
         swal({
   title: "Fields Empty!",
   text: "Please check the missing field!",
